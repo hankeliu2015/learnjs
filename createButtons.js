@@ -2,7 +2,7 @@
 // bind the event listen click action to the unique button.
 
 
-// function yieldmo() {
+// function createButtons() {
 //
 //   const n = 5;
 //   for (var i = 0; i < n; i++) {
@@ -20,7 +20,7 @@
 //
 
 // solution 1:
-function yieldmo() {
+function createButtons() {
 
   const n = 5;
 
@@ -40,7 +40,7 @@ function yieldmo() {
 }
 
 
-yieldmo();
+createButtons();
 
 //output button 0, button 1, button 2, button 3, button4
 // the result is no matter which button you click, it will return 5 in console  log.
