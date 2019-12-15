@@ -13,8 +13,11 @@ function addElement () {
   document.body.insertBefore(newDiv, currentDiv);
 }
 
-
 // Create a new paragraph element, and append it to the end of the document body
 var p = document.createElement("p");
-p.appendChild(document.createTextNode("thisis a new paragraph"))
+p.appendChild(document.createTextNode("This is a new paragraph created by JS"))
 document.body.appendChild(p);
+
+// js manipulate DOM test:
+var container = document.getElementById("container");
+  container.innerHTML = "Added New Content to this empty div container!";

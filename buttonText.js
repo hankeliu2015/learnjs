@@ -14,7 +14,3 @@ function myFunc(form) {
     form.elements["submit-button"].innerHTML = "New<br>Text";
     return false;
 }
-
-// js manipulate DOM test:
-var container = document.getElementById("container");
-  container.innerHTML = "Empty container added New Content!";
