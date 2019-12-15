@@ -13,11 +13,24 @@ function addElement () {
   document.body.insertBefore(newDiv, currentDiv);
 }
 
-// Create a new paragraph element, and append it to the end of the document body
-var p = document.createElement("p");
-p.appendChild(document.createTextNode("This is a new paragraph created by JS"))
-document.body.appendChild(p);
-
 // js manipulate DOM test:
 var container = document.getElementById("container");
   container.innerHTML = "Added New Content to this empty div container!";
+
+// create ul and ui
+
+let divForUl = document.createElement('div');
+divForUl.innerHTML = 'Daily Tasks:';
+document.body.appendChild(divForUl);
+
+
+let ul = document.createElement('ul');
+
+// document.body.appendChild(ul);
+
+for (let i = 0 ; i < 3 ; i ++) {
+  let ol = document.createElement('ol');
+  ol.innerHTML = `Task ${i}`;
+  ul.appendChild(ol);
+}
+divForUl.appendChild(ul);
