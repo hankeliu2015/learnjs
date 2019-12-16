@@ -19,25 +19,69 @@
 // }
 //
 
-// solution 1:
+// function createButtons() {
+//
+//   const n = 5;
+//   // var i;
+//   for (let i = 0; i < n; i++) {
+//     let btn = document.createElement('button');
+//
+//     btn.appendChild(document.createTextNode('Button' + i));
+//
+//     btn.addEventListener('click', function(){
+//       console.log(i);
+//     });
+//     document.body.appendChild(btn);
+//   }
+//   // console.log('what is i:', i)
+// }
+
 function createButtons() {
 
   const n = 5;
+  let btns = [];
+  // var i;
+  for (let i = 0; i < n; i++) {
+    btns[i] = document.createElement('button');
 
-  for (var i = 0; i < n; i++) {
-    let btn = document.createElement('button');
-    // btn.setAttribute("id", `i`);
-    btn.appendChild(document.createTextNode('Button' + i));
+    btns[i].appendChild(document.createTextNode('Button' + i));
 
-    document.body.appendChild(btn);
-
-    btn.addEventListener('click', function(e){
-      e.preventDefault();
-      let buttonText = e.currentTarget.innerText;
-      console.log(buttonText);
-    });
+    document.body.appendChild(btns[i]);
   }
+  // console.log('what is i:', i)
+
+
+  btns.forEach((el, index )=> {
+    el.addEventListener('click', function(){
+      console.log(index);
+    });
+  })
+
 }
+
+
+
+
+
+// solution 1:
+// function createButtons() {
+//
+//   const n = 5;
+//
+//   for (var i = 0; i < n; i++) {
+//     let btn = document.createElement('button');
+//     // btn.setAttribute("id", `i`);
+//     btn.appendChild(document.createTextNode('Button' + i));
+//
+//     document.body.appendChild(btn);
+//
+//     btn.addEventListener('click', function(e){
+//       e.preventDefault();
+//       let buttonText = e.currentTarget.innerText;
+//       console.log(buttonText);
+//     });
+//   }
+// }
 
 
 createButtons();
